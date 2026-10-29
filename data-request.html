@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Requests – Pashy Labs</title>
+<meta name="description" content="Make a GDPR data request about Card Champions: Sedma.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/icon.png">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Pashy<span>Labs</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="sedma.html">Card Champions: Sedma</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<header class="doc-head">
+  <div class="wrap">
+    <h1>Data requests (GDPR)</h1>
+    <p>Exercise your privacy rights for Card Champions: Sedma</p>
+  </div>
+</header>
+
+<main class="wrap doc">
+  <p>You can ask us to access, correct, delete, restrict or export your personal data, object to its processing, or withdraw consent. We reply within one month. Making a request is free.</p>
+
+  <div class="note">
+    <strong>Before you write:</strong> the Game stores your progress and settings only on your device, and we do not run accounts or servers. In most cases the quickest way to delete your game data is to clear the app's data or uninstall the Game. To withdraw consent for personalised ads, open <em>Settings → Privacy</em> in the Game. Advertising partners hold their own data; we will forward or help with requests about it.
+  </div>
+
+  <h2>Request form</h2>
+  <p>Filling this in opens an email to <a href="mailto:cardchampionssedma@gmail.com">cardchampionssedma@gmail.com</a> in your own email app, ready to send. Nothing is sent from this page.</p>
+
+  <form class="request" id="gdpr-form" novalidate>
+    <label>Your name
+      <input type="text" name="name" autocomplete="name" required>
+    </label>
+    <label>Your email address (for our reply)
+      <input type="email" name="email" autocomplete="email" required>
+    </label>
+    <label>Type of request
+      <select name="type" required>
+        <option value="Access to my data (Art. 15)">Access to my data</option>
+        <option value="Deletion of my data (Art. 17)">Delete my data</option>
+        <option value="Correction of my data (Art. 16)">Correct my data</option>
+        <option value="Restriction of processing (Art. 18)">Restrict processing</option>
+        <option value="Data portability (Art. 20)">Export my data</option>
+        <option value="Objection to processing (Art. 21)">Object to processing</option>
+        <option value="Withdrawal of consent (Art. 7)">Withdraw consent</option>
+        <option value="Other privacy question">Other privacy question</option>
+      </select>
+    </label>
+    <label>Device and platform (optional)
+      <input type="text" name="device" placeholder="For example: Samsung Galaxy, Android 15">
+    </label>
+    <label>Details
+      <textarea name="details" placeholder="Tell us what you need. Please don't include passwords or payment card details."></textarea>
+    </label>
+    <label class="check">
+      <input type="checkbox" name="confirm" required>
+      <span>I confirm the request is about my own data, or I am authorised to act for the person concerned.</span>
+    </label>
+    <button type="submit">Open email with my request</button>
+    <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+  </form>
+
+  <p>Prefer not to use the form? Email <a href="mailto:cardchampionssedma@gmail.com">cardchampionssedma@gmail.com</a> directly, or write to Pasol Liviu PFA, Bld. Bucureștii Noi nr. 136, Sector 1, 012366 București, Romania. You can also complain to the Romanian data protection authority, <a href="https://www.dataprotection.ro/">ANSPDCP</a>, or the authority in your country. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p class="legal-name">Pashy Labs · Pasol Liviu PFA</p>
+      <p>CUI 54510858 · Bld. Bucureștii Noi nr. 136, Sector 1, 012366 București, Romania</p>
+      <p><a href="mailto:liviupasolpfa@gmail.com">liviupasolpfa@gmail.com</a></p>
+      <p>© 2026 Pasol Liviu PFA. All rights reserved.</p>
+    </div>
+    <nav aria-label="Legal">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service &amp; EULA</a>
+      <a href="data-request.html">Data requests (GDPR)</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var form = document.getElementById('gdpr-form');
+  var msg = document.getElementById('form-msg');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = form.elements;
+    if (!f.name.value.trim() || !f.email.value.trim() || !f.email.checkValidity()) {
+      msg.textContent = 'Enter your name and a valid email address so we can reply.';
+      return;
+    }
+    if (!f.confirm.checked) {
+      msg.textContent = 'Tick the confirmation box to continue.';
+      return;
+    }
+    var subject = 'GDPR request – ' + f.type.value + ' – Card Champions: Sedma';
+    var body = [
+      'Request type: ' + f.type.value,
+      'Name: ' + f.name.value.trim(),
+      'Reply email: ' + f.email.value.trim(),
+      'Device/platform: ' + (f.device.value.trim() || '-'),
+      '',
+      'Details:',
+      f.details.value.trim() || '-',
+      '',
+      'I confirm this request concerns my own personal data, or that I am authorised to act for the person concerned.'
+    ].join('\n');
+    window.location.href = 'mailto:cardchampionssedma@gmail.com?subject=' +
+      encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    msg.textContent = 'Your email app should now open with the request filled in. Check it and press send.';
+  });
+})();
+</script>
+</body>
+</html>
