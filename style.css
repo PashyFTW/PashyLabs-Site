@@ -125,7 +125,9 @@ a:hover { color: var(--suit-red); }
 .facts li { padding: .55rem 0; border-bottom: 1px solid var(--line); }
 .facts li strong { font-family: var(--display); font-weight: 600; display: block; font-size: .9rem; color: var(--ink-soft); }
 
-.shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.trailer { width: 100%; display: block; border-radius: 10px; background: #000; border: 1px solid var(--line); aspect-ratio: 16 / 9; margin-top: 1.25rem; }
+.shots { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1rem; }
+@media (min-width: 640px) { .shots { grid-template-columns: 1fr 1fr; } }
 .shots img { border-radius: 10px; border: 1px solid var(--line); width: 100%; height: auto; }
 
 /* Legal / long-form pages */
@@ -177,3 +179,4 @@ form.request button:hover { background: var(--felt-deep); }
 .site-footer p { margin: .2rem 0; }
 .site-footer .legal-name { color: #fff; font-family: var(--display); font-weight: 600; }
 .site-footer nav { display: grid; gap: .3rem; align-content: start; }
+.doc .facts { padding-left: 0; }
