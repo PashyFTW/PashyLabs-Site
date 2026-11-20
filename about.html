@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us – PashyLabs</title>
+<meta name="description" content="PashyLabs is an independent mobile game studio from Romania, the developer of Card Champions: Sedma.">
+<link rel="stylesheet" href="style.css?v=4">
+<link rel="icon" href="assets/icon.png">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Pashy<span>Labs</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="index.html">Card Champions: Sedma</a>
+      <a href="about.html" aria-current="page">About Us</a>
+      <a href="support.html">Support</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="table">
+    <div class="wrap">
+      <div>
+        <h1>Classic card games, rebuilt for your phone.</h1>
+        <p>PashyLabs is an independent mobile game studio based in Bucharest, Romania. We make faithful, polished versions of the traditional card games people grew up playing at the kitchen table.</p>
+        <div class="actions">
+          <a class="btn" href="index.html">See Card Champions: Sedma</a>
+          <a class="btn ghost" href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="fan" aria-hidden="true">
+        <div class="card"><span class="idx">A<br>♠</span><span class="pip">♠</span><span class="idx bottom">A<br>♠</span></div>
+        <div class="card red"><span class="idx">10<br>♦</span><span class="pip">♦</span><span class="idx bottom">10<br>♦</span></div>
+        <div class="card"><span class="idx">K<br>♣</span><span class="pip">♣</span><span class="idx bottom">K<br>♣</span></div>
+        <div class="card red"><span class="idx">7<br>♥</span><span class="pip">♥</span><span class="idx bottom">7<br>♥</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <h2>Our first game</h2>
+        <p class="lede">Card Champions: Sedma brings Septica, the trick-taking game played across Romania, Czechia and Central Europe, to Android and iOS. Play one-on-one against computer opponents at several difficulty levels, earn coins, and unlock decks, frames and avatars as you go. It plays fully offline.</p>
+        <p><a href="index.html">More about the game</a></p>
+      </div>
+      <div>
+        <h2>About the studio</h2>
+        <p class="lede">For our founder, building a game studio was a long-held ambition. Through PashyLabs, we want to bring back the classic card games we played as kids with friends and relatives, on holidays and at family visits, and to recreate some of those magical moments with today's technology.</p>
+        <p class="lede">Sedma is our first title. We hope to bring many more to players and make them popular again: games some of us may have forgotten, and others have yet to discover.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p class="legal-name">PashyLabs · Pasol Liviu PFA</p>
+      <p><a href="mailto:liviupasolpfa@gmail.com">liviupasolpfa@gmail.com</a></p>
+      <p>© 2026 Pasol Liviu PFA. All rights reserved.</p>
+    </div>
+    <nav aria-label="Legal">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service &amp; EULA</a>
+      <a href="data-request.html">Data requests (GDPR)</a>
+      <a href="support.html">Support</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+<script>
+(function () {
+  var b = document.querySelector('.menu-btn'), n = document.getElementById('site-nav');
+  if (!b || !n) return;
+  b.addEventListener('click', function () {
+    var open = b.getAttribute('aria-expanded') === 'true';
+    b.setAttribute('aria-expanded', String(!open));
+    b.textContent = open ? 'Menu' : 'Close';
+    n.classList.toggle('open', !open);
+  });
+})();
+</script>
+</body>
+</html>

@@ -3,19 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PashyLabs</title>
-<meta name="description" content="PashyLabs is an independent mobile game studio from Romania, the developer of Card Champions: Sedma.">
-<link rel="stylesheet" href="style.css">
+<title>Card Champions: Sedma</title>
+<meta name="description" content="Card Champions: Sedma – the classic Septica card game for Android and iOS, by PashyLabs.">
+<link rel="canonical" href="https://pashylabs.com/">
+<meta property="og:title" content="Card Champions: Sedma">
+<meta property="og:description" content="The classic Septica card game for Android and iOS, by PashyLabs.">
+<meta property="og:image" content="https://pashylabs.com/assets/sedma-banner.jpg">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="style.css?v=4">
 <link rel="icon" href="assets/icon.png">
 </head>
-<body>
+<body class="dark">
 <header class="site-header">
   <div class="wrap">
     <a class="wordmark" href="index.html">Pashy<span>Labs</span></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav class="site-nav" id="site-nav" aria-label="Main">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="sedma.html">Card Champions: Sedma</a>
+      <a href="index.html" aria-current="page">Card Champions: Sedma</a>
+      <a href="about.html">About Us</a>
       <a href="support.html">Support</a>
       <a href="contact.html">Contact</a>
       <a href="privacy.html">Privacy</a>
@@ -25,36 +30,72 @@
 </header>
 
 <main>
-  <section class="table">
+  <section class="banner">
+    <img src="assets/sedma-banner.jpg" width="1024" height="500" alt="Sedma – Card Champions">
+  </section>
+
+  <section class="table intro">
     <div class="wrap">
       <div>
-        <h1>Classic card games, rebuilt for your phone.</h1>
-        <p>PashyLabs is an independent mobile game studio based in Bucharest, Romania. We make faithful, polished versions of the traditional card games people grew up playing at the kitchen table.</p>
-        <div class="actions">
-          <a class="btn" href="sedma.html">See Card Champions: Sedma</a>
-          <a class="btn ghost" href="contact.html">Contact</a>
-        </div>
+        <h1>Card Champions: Sedma</h1>
+        <p>Classics reborn. The traditional game of Septica, known as Sedma in Czechia, on your phone: quick one-on-one matches against computer opponents, at your own pace, online or offline.</p>
+        <p><strong>Coming soon to Google Play and the App Store.</strong></p>
       </div>
       <div class="fan" aria-hidden="true">
-        <div class="card"><span class="idx">A<br>♠</span><span class="pip">♠</span><span class="idx bottom">A<br>♠</span></div>
-        <div class="card red"><span class="idx">10<br>♦</span><span class="pip">♦</span><span class="idx bottom">10<br>♦</span></div>
-        <div class="card"><span class="idx">K<br>♣</span><span class="pip">♣</span><span class="idx bottom">K<br>♣</span></div>
+        <div class="card red"><span class="idx">7<br>♦</span><span class="pip">♦</span><span class="idx bottom">7<br>♦</span></div>
+        <div class="card"><span class="idx">7<br>♣</span><span class="pip">♣</span><span class="idx bottom">7<br>♣</span></div>
+        <div class="card"><span class="idx">7<br>♠</span><span class="pip">♠</span><span class="idx bottom">7<br>♠</span></div>
         <div class="card red"><span class="idx">7<br>♥</span><span class="pip">♥</span><span class="idx bottom">7<br>♥</span></div>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section stage" id="trailer">
+    <div class="wrap">
+      <h2>Trailer</h2>
+      <video class="trailer" controls preload="metadata" poster="assets/trailer-poster.jpg" playsinline>
+        <source src="assets/sedma-trailer.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <section class="section info" id="about-game">
     <div class="wrap split">
       <div>
-        <h2>Our first game</h2>
-        <p class="lede">Card Champions: Sedma brings Septica, the trick-taking game played across Romania, Czechia and Central Europe, to Android and iOS. Play one-on-one against computer opponents at several difficulty levels, earn coins, and unlock decks, frames and avatars as you go. It plays fully offline.</p>
-        <p><a href="sedma.html">More about the game</a></p>
+        <h2>What's in the game</h2>
+        <ul>
+          <li>One-on-one Septica with French cards, played by the traditional rules</li>
+          <li>Computer opponents at several difficulty levels</li>
+          <li>A tutorial for new players</li>
+          <li>Daily login rewards, levels and a progression map</li>
+          <li>Decks, frames and avatars, most of them unlocked by playing</li>
+          <li>Fully playable offline</li>
+        </ul>
+        <p>More is planned, including Hungarian cards and new game modes.</p>
       </div>
       <div>
-        <h2>About the studio</h2>
-        <p class="lede">For our founder, building a game studio was a long-held ambition. Through PashyLabs, we want to bring back the classic card games we played as kids with friends and relatives, on holidays and at family visits, and to recreate some of those magical moments with today's technology.</p>
-        <p class="lede">Sedma is our first title. We hope to bring many more to players and make them popular again: games some of us may have forgotten, and others have yet to discover.</p>
+        <h2>Fair to play</h2>
+        <p>The game is free to download. It shows optional banner and rewarded ads, and offers optional coin packs and a Premium upgrade that removes ads and adds an exclusive deck and frame. There are no full-screen interstitial ads, and the game is not pay-to-win.</p>
+        <ul class="facts">
+          <li><strong>Platforms</strong>Android, iOS (coming soon)</li>
+          <li><strong>Languages</strong>English, with Romanian and Czech at launch</li>
+          <li><strong>Developer</strong>PashyLabs (Pasol Liviu PFA)</li>
+          <li><strong>Support</strong><a href="mailto:cardchampionssedma@gmail.com">cardchampionssedma@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section stage" id="screenshots">
+    <div class="wrap">
+      <h2>Screenshots</h2>
+      <div class="shots">
+        <a href="assets/screenshot-1.jpg"><img src="assets/screenshot-1.jpg" width="1600" height="900" alt="A round in progress against the opponent The Shark, with six cards on the table" loading="lazy"></a>
+        <a href="assets/screenshot-2.jpg"><img src="assets/screenshot-2.jpg" width="1600" height="900" alt="A round against The Strategist, played with a teal card-back deck" loading="lazy"></a>
+        <a href="assets/screenshot-3.jpg"><img src="assets/screenshot-3.jpg" width="1600" height="900" alt="Victory screen with a coin reward and confetti" loading="lazy"></a>
+        <a href="assets/screenshot-4.jpg"><img src="assets/screenshot-4.jpg" width="1600" height="900" alt="Game mode menu with daily challenges, player info and difficulty choice" loading="lazy"></a>
+        <a href="assets/screenshot-5.jpg"><img src="assets/screenshot-5.jpg" width="1600" height="900" alt="Level Up panel announcing a newly unlocked frame" loading="lazy"></a>
+        <a href="assets/screenshot-6.jpg"><img src="assets/screenshot-6.jpg" width="1600" height="900" alt="Customize panel with frames to unlock at higher levels" loading="lazy"></a>
       </div>
     </div>
   </section>
@@ -86,6 +127,28 @@
     b.textContent = open ? 'Menu' : 'Close';
     n.classList.toggle('open', !open);
   });
+})();
+</script>
+<script>
+(function () {
+  var links = document.querySelectorAll('.shots a');
+  if (!links.length) return;
+  var box = document.createElement('div');
+  box.className = 'lightbox'; box.hidden = true;
+  box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Screenshot');
+  box.innerHTML = '<img alt=""><button type="button" aria-label="Close">&times;</button>';
+  document.body.appendChild(box);
+  var big = box.querySelector('img'), btn = box.querySelector('button'), last = null;
+  function close() { box.hidden = true; document.body.classList.remove('lb-open'); if (last) last.focus(); }
+  links.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault(); last = a;
+      var im = a.querySelector('img'); big.src = a.getAttribute('href'); big.alt = im ? im.alt : '';
+      box.hidden = false; document.body.classList.add('lb-open'); btn.focus();
+    });
+  });
+  box.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !box.hidden) close(); });
 })();
 </script>
 </body>
