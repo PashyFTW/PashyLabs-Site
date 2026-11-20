@@ -10,7 +10,7 @@
 <meta property="og:description" content="The classic Septica card game for Android and iOS, by PashyLabs.">
 <meta property="og:image" content="https://pashylabs.com/assets/sedma-banner.jpg">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 <link rel="icon" href="assets/icon.png">
 </head>
 <body class="dark">
@@ -53,9 +53,13 @@
   <section class="section stage" id="trailer">
     <div class="wrap">
       <h2>Trailer</h2>
-      <video class="trailer" controls preload="metadata" poster="assets/trailer-poster.jpg" playsinline>
-        <source src="assets/sedma-trailer.mp4" type="video/mp4">
-      </video>
+      <div class="trailer yt" id="yt" data-id="ff4hHvJUg2g">
+        <button type="button" class="yt-play" aria-label="Play the Card Champions: Sedma trailer on YouTube">
+          <img src="assets/screenshot-1.jpg" alt="" width="1600" height="900" loading="lazy">
+          <span class="yt-icon" aria-hidden="true"></span>
+        </button>
+        <noscript><a href="https://youtu.be/ff4hHvJUg2g">Watch the trailer on YouTube</a></noscript>
+      </div>
     </div>
   </section>
 
@@ -91,9 +95,9 @@
       <h2>Screenshots</h2>
       <div class="shots">
         <a href="assets/screenshot-1.jpg"><img src="assets/screenshot-1.jpg" width="1600" height="900" alt="A round in progress against the opponent The Shark, with six cards on the table" loading="lazy"></a>
-        <a href="assets/screenshot-2.jpg"><img src="assets/screenshot-2.jpg" width="1600" height="900" alt="A round against The Strategist, played with a teal card-back deck" loading="lazy"></a>
-        <a href="assets/screenshot-3.jpg"><img src="assets/screenshot-3.jpg" width="1600" height="900" alt="Victory screen with a coin reward and confetti" loading="lazy"></a>
-        <a href="assets/screenshot-4.jpg"><img src="assets/screenshot-4.jpg" width="1600" height="900" alt="Game mode menu with daily challenges, player info and difficulty choice" loading="lazy"></a>
+        <a href="assets/screenshot-2.jpg"><img src="assets/screenshot-2.jpg" width="1600" height="900" alt="A round against The Novice, played with a dark patterned card-back deck" loading="lazy"></a>
+        <a href="assets/screenshot-3.jpg"><img src="assets/screenshot-3.jpg" width="1600" height="900" alt="A round against The Strategist, played with a teal card-back deck" loading="lazy"></a>
+        <a href="assets/screenshot-4.jpg"><img src="assets/screenshot-4.jpg" width="1600" height="900" alt="Victory screen with a coin reward and confetti" loading="lazy"></a>
         <a href="assets/screenshot-5.jpg"><img src="assets/screenshot-5.jpg" width="1600" height="900" alt="Level Up panel announcing a newly unlocked frame" loading="lazy"></a>
         <a href="assets/screenshot-6.jpg"><img src="assets/screenshot-6.jpg" width="1600" height="900" alt="Customize panel with frames to unlock at higher levels" loading="lazy"></a>
       </div>
@@ -149,6 +153,20 @@
   });
   box.addEventListener('click', close);
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !box.hidden) close(); });
+})();
+</script>
+<script>
+(function(){
+  var box=document.getElementById('yt'); if(!box) return;
+  var btn=box.querySelector('.yt-play');
+  btn.addEventListener('click',function(){
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+box.dataset.id+'?autoplay=1&rel=0';
+    f.title='Card Champions: Sedma trailer';
+    f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen=true;
+    box.replaceChild(f,btn);
+  });
 })();
 </script>
 </body>
